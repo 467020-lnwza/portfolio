@@ -102,25 +102,6 @@
             margin-bottom: 2rem;
         }
 
-        .btn {
-            display: inline-block;
-            background-color: var(--secondary-color);
-            color: var(--primary-color);
-            padding: 12px 30px;
-            font-weight: 800;
-            border-radius: 30px;
-            text-decoration: none;
-            text-transform: uppercase;
-            transition: transform 0.2s, box-shadow 0.2s;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        }
-
         /* ==========================================
            4. ABOUT ME SECTION
            ========================================== */
@@ -254,10 +235,9 @@
         }
 
         .contact-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            text-align: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .contact-info h3 {
@@ -273,6 +253,7 @@
         .info-item {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 1rem;
             margin-bottom: 1rem;
             font-weight: 600;
@@ -281,12 +262,12 @@
         .info-item i {
             color: var(--primary-color);
             font-size: 1.2rem;
-            width: 25px;
         }
 
         .social-links {
             margin-top: 2rem;
             display: flex;
+            justify-content: center;
             gap: 1rem;
         }
 
@@ -309,34 +290,6 @@
             background-color: var(--primary-color);
             color: #ffffff;
             transform: translateY(-3px);
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            outline: none;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            border-color: var(--primary-color);
-        }
-
-        .contact-form .btn {
-            background-color: var(--primary-color);
-            color: #ffffff;
-            align-self: flex-start;
         }
 
         /* ==========================================
@@ -458,7 +411,6 @@
     <section id="contact" class="contact">
         <h2>Contact <span>Me</span></h2>
         <div class="contact-container">
-            
             <div class="contact-info">
                 <h3>ช่องทางการติดต่อ</h3>
                 <p>หากสนใจร่วมงานหรือสอบถามข้อมูลเพิ่มเติม สามารถติดต่อได้ผ่านช่องทางด้านล่างนี้ค่ะ</p>
@@ -483,20 +435,6 @@
                     <a href="#"><i class="fa-brands fa-artstation"></i></a>
                 </div>
             </div>
-
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <input type="text" id="name" placeholder="ชื่อของคุณ" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" placeholder="อีเมลของคุณ" required>
-                </div>
-                <div class="form-group">
-                    <textarea id="message" rows="5" placeholder="ข้อความ..." required></textarea>
-                </div>
-                <button type="submit" class="btn">ส่งข้อความ</button>
-            </form>
-
         </div>
     </section>
 
@@ -504,12 +442,5 @@
         <p>&copy; 2026 Pimwimon Sports 3D Portfolio. Designed with Energy.</p>
     </footer>
 
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('ขอบคุณสำหรับการติดต่อ! ข้อความของคุณถูกส่งเรียบร้อยแล้ว');
-            this.reset();
-        });
-    </script>
 </body>
 </html>
