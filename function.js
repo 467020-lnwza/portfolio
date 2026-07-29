@@ -4,13 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // สลับสถานะ Active ของปุ่ม
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
             const filterValue = button.getAttribute('data-filter');
 
-            // แสดง/ซ่อน การ์ดผลงานตามหมวดหมู่
             cards.forEach(card => {
                 if (filterValue === 'all' || card.classList.contains(filterValue)) {
                     card.style.display = 'block';
