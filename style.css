@@ -1,1 +1,201 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+:root {
+    --primary-color: #ff5500; /* สีส้มสปอร์ต */
+    --secondary-color: #ffffff; /* สีขาว */
+    --bg-light: #f8f9fa;
+    --dark-text: #1a1a1a;
+    --gray-bg: #ecefe;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+/* Header & Navbar */
+header {
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--dark-text);
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #ff5500 0%, #ff8800 100%);
+    color: var(--secondary-color);
+    padding: 100px 8%;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 12px 30px;
+    font-weight: 800;
+    border-radius: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.portfolio h2, .about h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.portfolio h2 span, .about h2 span {
+    color: var(--primary-color);
+}
+
+.filter-buttons {
+    margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+    background: var(--secondary-color);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 8px 22px;
+    margin: 0 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--secondary-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card-img img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.card-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-info p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* About Section */
+.about {
+    background-color: #ffffff;
+    padding: 80px 8%;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-text);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
