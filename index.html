@@ -1,5 +1,98 @@
 <!DOCTYPE html>
-<html lang=""th>
+<html lang="th">
 <head>
-  Hello World
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports 3D Model Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.net/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+<body>
+
+    <header>
+        <div class="logo">3D<span>SPORT</span></div>
+        <nav>
+            <ul>
+                <li><a href="#hero">หน้าแรก</a></li>
+                <li><a href="#portfolio">ผลงานโมเดล</a></li>
+                <li><a href="#about">เกี่ยวกับฉัน</a></li>
+                <li><a href="#contact">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>3D MODEL DESIGNER</h1>
+            <p>เนรมิตจินตนาการทางกีฬา ให้เป็นโมเดล 3 มิติสุดสมจริง</p>
+            <a href="#portfolio" class="btn">ดูผลงานทั้งหมด</a>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2>ผลงาน<span>โมเดล 3D</span></h2>
+        
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+            <button class="filter-btn" data-filter="gear">อุปกรณ์กีฬา</button>
+            <button class="filter-btn" data-filter="character">ตัวละคร/นักกีฬา</button>
+            <button class="filter-btn" data-filter="stadium">สนามแข่งขัน</button>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="card gear">
+                <div class="card-img">
+                    <img src="https://via.placeholder.com/400x300/ff6600/ffffff?text=Basketball+Model" alt="3D Basketball">
+                </div>
+                <div class="card-info">
+                    <h3>3D Pro Basketball</h3>
+                    <p>โมเดลลูกบาสเกตบอลความละเอียดสูง</p>
+                </div>
+            </div>
+
+            <div class="card character">
+                <div class="card-img">
+                    <img src="https://via.placeholder.com/400x300/333333/ffffff?text=Runner+Character" alt="3D Runner">
+                </div>
+                <div class="card-info">
+                    <h3>Cyber Runner</h3>
+                    <p>คาแรคเตอร์นักวิ่งสไตล์ไซเบอร์พังก์</p>
+                </div>
+            </div>
+
+            <div class="card stadium">
+                <div class="card-img">
+                    <img src="https://via.placeholder.com/400x300/ff6600/ffffff?text=Futuristic+Arena" alt="3D Arena">
+                </div>
+                <div class="card-info">
+                    <h3>Futuristic Arena</h3>
+                    <p>โมเดลสนามแข่งสเตเดียมแห่งอนาคต</p>
+                </div>
+            </div>
+
+            <div class="card gear">
+                <div class="card-img">
+                    <img src="https://via.placeholder.com/400x300/333333/ffffff?text=Running+Sneakers" alt="3D Sneakers">
+                </div>
+                <div class="card-info">
+                    <h3>Sport Sneakers</h3>
+                    <p>โมเดลรองเท้าวิ่งโครงสร้างน้ำหนักเบา</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <h2>เกี่ยวกับ<span>ผู้พัฒนา</span></h2>
+            <p>เชี่ยวชาญการปั้นโมเดล 3D สำหรับวงการกีฬา เกม และโฆษณา มุ่งเน้นความถูกต้องตามหลักสรีรศาสตร์ เส้นสายที่โฉบเฉี่ยว และความสมจริงของพื้นผิววัสดุ</p>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2026 Sports 3D Portfolio. Designed with Energy.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
